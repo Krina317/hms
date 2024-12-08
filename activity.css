@@ -1,0 +1,315 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+.navbar{
+    background-color: none;
+    opacity: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    align-items: center; 
+    color: rgb(70, 27, 27);
+    font-family: montserrat;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.navbar-brand {
+    color: rgb(70, 27, 27);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.navbar-brand:hover{
+    color: white;
+    text-decoration: none; 
+}
+.links{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 60px;
+    color:  rgb(70, 27, 27);
+    font-size: 1.25rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+.links:hover{
+    color: white;
+    text-decoration: none;
+}
+.background-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    z-index: 1;
+}
+.background-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("cover3.jpg"); /* Your background image */
+  background-size: cover;
+  background-position: center;
+}
+.text-overlay {
+    position: absolute;
+    padding-top: 700px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(70, 27, 27);
+    text-align: center;
+    z-index: 2; /* Ensure text is above the video */
+    opacity: 1; /* Visible initially */
+    transition: opacity 2s ease-in-out; /* Smooth transition for text */
+    font-family: Montserrat;
+  }
+.text-overlay:hover{
+    color: white;
+}
+.heading{
+    font-size: 4rem;
+    color:  rgb(70, 27, 27);
+    text-decoration: none;
+    letter-spacing: 8px;
+}
+.text{
+    line-height: 30px;
+    text-decoration: none;
+    color: white;
+}
+.text:hover{
+    color: rgb(70, 27, 27);
+}
+.signup{
+    padding: 20px;
+    letter-spacing: 2px;
+    color: rgb(70, 27, 27);
+    background-color: gainsboro;
+    border:none;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 150px;
+    cursor: pointer;
+}
+.signup:hover,.signup:active{
+    background-color: rgb(70, 27, 27);
+    color: gainsboro;
+}
+.roomtext{
+    color: rgb(70, 27, 27);
+    font-family: Montserrat;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(20, 14, 14);
+    padding: 10px;
+ }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+   
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+.book{
+    padding: 20px;
+    letter-spacing: 2px;
+    background-color: rgb(70, 27, 27);
+    color: white;
+    border:none;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 150px;
+    cursor: pointer;
+}
+.book:hover,.book:active{
+    color: rgb(70, 27, 27);
+    background-color: white;
+    border: solid;
+    border-color:rgb(70, 27, 27) ;
+}
+.headingbook{
+    font-size: 2.5rem;
+    color: rgb(70, 27, 27) ;
+    text-align: center;
+    font-family: Montserrat;
+    margin-top:20px;
+}
+.dateclass{
+    font-size: 1.5rem;
+    color: rgb(70, 27, 27) ;
+    text-align: center;
+    font-family: Montserrat;
+    margin-top:20px;
+}
+.datebox{
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    background-color: white;
+    color: rgb(70, 27, 27) ;
+}
+.roombody {
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(70, 27, 27) ;
+}
+.container {
+    text-align: center;
+    /* background: #fff; */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    color: rgb(70, 27, 27) ;
+    font-family: Montserrat;
+}
+.room {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: rgb(70, 27, 27) ;
+    font-family: Montserrat;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+.controls button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(70, 27, 27) ;
+    border: none;
+    border-radius: 50%;
+}
+.controls button:hover {
+    color: white;
+    background-color: rgb(70, 27, 27) ;
+}
+.controls input {
+    width: 40px;
+    text-align: center;
+}
+.add-room {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: rgb(70, 27, 27);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 550px;
+    margin-bottom: 50px;
+}
+.add-room:hover {
+    background-color: white;
+    color: rgb(70, 27, 27) ;
+}
+.inputbox{
+    background-color: white;
+    color: rgb(70, 27, 27) ;
+    border:none;
+    border-radius: 8px;
+}
+.roomtype{
+    text-align: center;
+    color: rgb(70, 27, 27) ;
+    margin: 10px 0;
+}
+#buttondone {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(70, 27, 27);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    margin-left:10px;
+}
+#buttondone:hover {
+    background-color: white;
+    color: rgb(70, 27, 27) ;
+}
+.roombookbutton{
+    padding: 10px; 
+    background-color: rgb(70, 27, 27);
+    color:white;
+    border-radius: 8px;
+    border:none;
+}
+.roombookbutton:hover{
+    color: rgb(70, 27, 27);
+    background-color:white;
+}
+.pay{
+    background-color: lavenderblush;
+    color: rgb(70, 27, 27);
+    width: 1000px;
+    text-align: center;
+    margin-left:200px;
+    border-radius:10px;
+    font-size: 1.25rem;
+    font-family:Montserrat;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+.textbox{
+    border:none;
+    background-color:rgb(70, 27, 25);
+    color:white;
+    outline: none;
+    border-radius: 8px;
+    padding: 5px;
+}
+.textbox:focus{
+    border:rgb(70, 27, 27);
+    background-color:white;
+    color:rgb(70, 27, 25);
+}
+#error-message {
+    color: rgb(70, 27, 25);
+    font-size: 14px;
+}
+#expiry-error {
+    color: rgb(70, 27, 25);
+    font-size: 14px;
+}
+.thankyou{
+    font-size:2.5rem;
+    color:rgb(70, 27, 25);
+    font-family: Montserrat;
+    text-align:center;
+    margin-top:50px;
+    border:solid;
+    border-color: rgb(70, 27, 25);
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding:80px 10px;
+    width:1000px;
+    border-width: 10px;
+    margin-left:150px;
+}

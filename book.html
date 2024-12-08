@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking</title>
+    <link href="activity.css" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=favorite" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+</head>
+<body class="background-img background-container" style="background-image:url(book.jpg)">
+    <nav class="navbar">
+        <div>
+        <a class="navbar-brand" href="index.html" > <b>The Harbor</b></a>
+      
+        <a class="links" href="rooms.html">Rooms</a>
+    
+        <a class="links" href="book.html" >Book</a>
+        <a class="links" href="contact.html" >Contact</a>
+        </div>
+    </nav>
+    
+    <div id="div1">
+        <div class="headingbook"><b>Book your room with us</b>
+        <div style="font-size: 1rem;margin-top:15px">Book the best room for the most memorable trip of your life.</div></div>
+            <br>
+        <div>
+            <form class="dateclass">
+                <label for="start-date" ><b>Check-in: </b></label>
+                <input type="date" id="start-date" name="start-date" required class="datebox">  &nbsp;&nbsp;| &nbsp;
+                
+                <label for="end-date" ><b>Check-out: </b></label>
+                <input type="date" id="end-date" name="end-date" required max="2031-12-31" class="datebox">
+                <br>
+            </form>
+            </div><br>
+            
+            <div class="roombody">
+            <h2 style="text-align: center;">Rooms and Guests</h2></div>
+        <div id="rooms-container" style="text-align: center;">
+            <!-- Room details will be dynamically added here -->
+        </div>
+        <button class="add-room" id="add-room-btn">+ Add Another Room</button> <button id="buttondone" onclick="(this)" >Search</button>
+        <br></div>
+        <div style="color: rgb(70, 27, 27); text-align:center; font-family: Montserrat" id="roomdiv">
+            <h2>Pick your room</h2>
+            <br>
+            <div style="display: flex; justify-content: center">
+            <div ><img src="standard seashells1.jpg" style="height: 200px;width:400px;border-radius:8px;"></div><div style="margin-top: 30px; margin-left:40px"><b> Standard Seashells - $59</b>
+            <br><br><b>Total Cost: </b><span id="costdeluxe">$0</span><br><br><button class="roombookbutton" id="deluxebook" onclick="ordersummary('deluxe')">Book</button></div></div>
+            
+            <br><br>
+            <div style="display: flex; justify-content: center">
+                <div ><img src="coastal calmness.jpeg" style="height: 200px;border-radius:8px;width:400px;margin-left:-10px"></div><div style="margin-top: 30px; margin-left:45px"><b> Coastal Calmness - $89</b>
+                <br><br><b>Total Cost: </b><span id="costpremium">$0</span><br><br><button class="roombookbutton" id="premiumbook" onclick="ordersummary('premium')">Book</button></div></div>
+
+            <br><br>
+            <div style="display: flex; justify-content: center">
+                <div ><img src="sea suite3.jpeg" style="height: 200px;border-radius:8px;width:400px; margin-left:-70px"></div><div style="margin-top: 30px; margin-left:50px"><b> Sea Suites - $109</b>
+                <br><br><b>Total Cost: </b><span id="costsuite">$0</span><br><br><button class="roombookbutton" id="suitebook" onclick="ordersummary('suite')">Book</button></div></div><br>
+            <div style="text-align: center; padding-bottom:50px"><button class="roombookbutton" id="2to1" >Go back</button></div>
+        </div>
+    <div id="Order" style="background-color:gainsboro; text-align:center; color:rgb(70, 27, 27);padding-top:15px; font-family:Montserrat;padding-bottom:30px"><h2>Room summary</h2>
+        <br><br><div style="font-size: 1rem;">
+            <b>Check-in: </b><span id="Checkin" ></span><br>
+            <b>Check-out: </b><span id="Checkout" ></span><br>
+            <b>Nights Stay: </b><span id="noofnight" ></span><br>
+            <b>Choice of room: </b><span id="roomtype" ></span><br>
+            <b>Rate per night: </b><span id="rate" >$0</span><br>
+            <b>Cost of trip: </b><span id="cost" >$0</span>
+            <br><br>
+            <button class="roombookbutton" id="startover">Start over</button>
+            <button class="roombookbutton" id="previous">Go back</button>
+            <button class="roombookbutton" id="next">Sign in and pay</button><br>&nbsp;<br>
+        </div></div>
+    <div id="signin">
+        <div style="color:rgb(70, 27, 27); text-align:center;font-family:Montserrat;"><h2>Sign in</h2></div>
+        <form id="registrationForm" onsubmit="alert('Registration successful!'); return false;" style="text-align: center;background-color:gainsboro;border-width: 0.3cm; padding-top: 30px;padding-bottom: 30px;color:rgb(70, 27, 27);font-family:Montserrat;">
+            <br>
+            <label for='name'><b>Name: </b></label>
+            <input type='text' id='name' class="textbox" style="margin-left: 10px;" required>
+            <span class='error'></span><br><br>
+    
+            <label for='email'><b>Email: </b></label>
+            <input type='email' id='email'  class="textbox"  style="margin-left: 10px;" required>
+            <span class='error'></span><br><br>
+    
+            <label for='numbers'><b>Phone number: </b></label>
+            <input type='text' id='number' class="textbox" style="margin-left: 10px;" required>
+            <span class='error'></span><br><br>
+            <button type='submit' class="roombookbutton" id="pay">Sign in</button>
+            <br>
+        </form>    
+
+    </div>
+
+    </div>
+    <script src="activity.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+            $("#payment").hide()
+            $("#roomdiv").hide();
+            $("#Order").hide();
+            $("#signin").hide()
+            $("#buttondone").click(function(){
+                $("#roomdiv").show();
+                $("#div1").hide();
+                calculateTotalCost();
+                
+            })
+            $("#start-date, #end-date").change(calculateTotalCost);
+            $("#suitebook").click(function(){
+                $("#Order").show();
+                $("#roomdiv").hide();
+                $("div1").hide();
+
+            })
+            $("#deluxebook").click(function(){
+                $("#Order").show();
+                $("#roomdiv").hide();
+                $("div1").hide();
+            })
+            $("#premiumbook").click(function(){
+                $("#Order").show();
+                $("#roomdiv").hide();
+                $("div1").hide();
+            })
+            $("#previous").click(function(){
+                $("#roomdiv").show();
+                $("#div1").hide();
+                $("#Order").hide();
+
+            })
+            $("#startover").click(function(){
+                $("#roomdiv").hide();
+                $("#div1").show();
+                $("#Order").hide();
+
+            })
+            $("#2to1").click(function(){
+                $("#roomdiv").hide();
+                $("#div1").show();
+                $("#Order").hide();
+
+            })
+            $("#next").click(function(){
+                $("#roomdiv").hide();
+                $("#div1").hide();
+                $("#Order").hide();
+                $("#signin").show()
+
+            })
+        })
+
+        
+     
+     </script>
+    
+</body>
+</html>

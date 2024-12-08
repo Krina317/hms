@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rooms</title>
+    <link href="activity.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=favorite" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<body class="background-img background-container" style="background-image: url(about.jpg);">
+    <nav class="navbar fixed-top">
+        <div>
+        <a class="navbar-brand" href="index.html" > <b>The Harbor</b></a>
+      
+        <a class="links" href="rooms.html">Rooms</a>
+    
+        <a class="links" href="book.html" >Book</a>
+        <a class="links" href="contact.html" >Contact</a>
+        </div>
+    </nav><br><br>
+    <div class="roomtext" style="font-size: 2.5rem; padding-top:40px; text-align:center"><b>OUR ROOMS</b><br>
+        <button id="ss" class="book" style="margin-top: 0px; margin-left:0px">Standard Seashells</button> <button id="cc" class="book" style="margin-top: 0px; margin-left:0px">Coastal Calmness</button> <button id="sss" class="book" style="margin-top: 0px; margin-left:0px">Sea Suites</button>
+        
+    </div><br>
+    <!-- <button id="ss" class="book" style="margin-top: 0px; margin-left:600px">Standard Seashells</button><br>&nbsp; -->
+<div style="text-align: center" id="roomdiv1">
+    <div style="width: 50%; float:left;background-color:rgb(70, 25, 25); padding-top :15px; padding-bottom:15px">
+        <img src="standard seashells1.jpg" id="img1" style="height: 350px; border-radius:8px;">
+     </div>
+     <div style="width: 50%; float:right;background-color:rgb(70, 25, 25); height:375px;padding-top :10px; ">
+        <br><br><br><Br><br><h2 style="color:white; font-family:Montserrat">Standard Seashells<br><br>Standard Seashells offers cozy comfort with charming nautical accents, perfect for a simple seaside getaway.</h2>
+     </div>
+</div>
+    
+
+<div style="text-align: center" id="roomdiv2">
+    <div style="width: 50%; float:left;background-color:rgb(70, 25, 25); padding-top :20px; padding-bottom:56.5px; text-align:center">
+        <br><Br><br><h2 style="color:white; font-family:Montserrat">Coastal Calmness<br><br>Coastal Calmness is a serene retreat, blending soothing coastal decor with tranquil views for a peaceful escape.</h2>
+        
+     </div>
+     <div style="width: 50%; float:right;background-color:rgb(70, 25, 25); height:365px;padding-top :15px; padding-bottom:0px;text-align:center">
+        <img src="coastal calmness.jpeg" id="img1" style="height: 350px;border-radius:8px;">
+     </div>
+</div>
+
+
+<div style="text-align: center" id="roomdiv3">
+    <div style="width: 50%; float:left;background-color:rgb(70, 25, 25); padding-top :15px; padding-bottom:15px">
+        <img src="sea suite3.jpeg" id="img1" style="height: 350px;border-radius:8px;">
+     </div>
+     <div style="width: 50%; float:right;background-color:rgb(70, 25, 25); height:375px;padding-top :10px; ">
+        <br><br><br><Br><br><h2 style="color:white; font-family:Montserrat">Sea Suites<br><br>Luxurious ocean-facing accommodation offering stunning views with premium amenities.</h2>
+     </div>
+</div>
+<div id="bookbutton">
+<a href="book.html"><button class="book" style="margin-left:600px;margin-top:15px">BOOK NOW</button></a></div>
+<script>
+    $(document).ready(function(){
+        $("#roomdiv1").hide();
+        $("#roomdiv2").hide();
+        $("#roomdiv3").hide();
+        $("#bookbutton").show();
+        $("#ss").click(function(){
+            $("#roomdiv1").fadeIn(500);
+            $("#roomdiv2").hide();
+            $("#roomdiv3").hide();
+            $("#bookbutton").show();
+        })
+        $("#sss").click(function(){
+            $("#roomdiv1").hide();
+            $("#roomdiv2").hide();
+            $("#roomdiv3").fadeIn(500);
+            $("#bookbutton").show();
+        })
+        $("#cc").click(function(){
+            $("#roomdiv1").hide();
+            $("#roomdiv2").fadeIn(500);
+            $("#roomdiv3").hide();
+            $("#bookbutton").show();
+        })
+});
+</script>
+</body>
+</html>
